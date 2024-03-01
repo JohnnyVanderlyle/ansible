@@ -3,7 +3,10 @@
   hosts: all
   become: true
   tasks:
-    - name: apply local A-records to all PiHole DNS Servers
-      ansible.builtin.command: 
-      register:
+    - name: TASK | Copy dnsmasq config for local DNS
+      template: src=template-dns.list dest=/etc/pihole/custom.list force=yes
+#    - name: TASK | Restart dnsmasq
+ #     service:
+  #      name: dnsmasq
+   #     state: restarted
 
