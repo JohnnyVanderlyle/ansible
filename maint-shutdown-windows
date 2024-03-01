@@ -1,6 +1,6 @@
 ---
 - name: Play to Shutdown Windows
-  hosts: *
+  hosts: all
   tasks:
   - name: Shutdown Windows PC
     ansible.windows.win_command:
