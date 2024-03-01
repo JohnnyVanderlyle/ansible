@@ -1,0 +1,27 @@
+# Townhead Local network
+# 
+# Gateway
+# 192.168.35.1    pfsense-01
+# Static DHCP Reservations
+# 192.168.35.64   gitlab-ce-01
+# 192.168.35.66   dockerhost-01
+# 192.168.35.70   nextcloud-01
+# 192.168.35.74   elk-01
+# 192.168.35.76   checkmk-01
+# 192.168.35.86   homeassistant-01
+# 192.168.35.23   ns-01
+# 192.168.35.10   ns-02
+# DHCP Range - 5 - 25
+# 192.168.35.5    cbguest-05
+# 192.168.35.19   cbguest-19
+# VPN Reservations
+# 192.168.2.2     vpn-01
+# 192.168.2.3     vpn-02
+# Split DNS Entries
+#192.30.252.153  www.chrisbergeron.com
+10.0.1.253 pac.wonkaco.co.uk
+10.0.1.11 san.wonkaco.co.uk
+10.0.1.7 smoothwall1.wonkaco.co.uk
+10.0.1.8 smoothwall2.wonkaco.co.uk
+10.0.1.50 test.wonkaco.co.uk
+10.0.1.66 test2.wonkaco.co.uk
