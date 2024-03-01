@@ -1,1 +1,10 @@
-YAML test
+---
+- hosts: all
+
+  become: true
+
+  tasks:
+    - name: APT Package Updater
+      apt:
+        upgrade: yes
+        update_cache: yes
