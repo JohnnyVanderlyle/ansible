@@ -7,8 +7,8 @@
       template: src=template-dns.list dest=/etc/pihole/custom.list force=yes
     - name: TASK | Copy CNAME DNS entires to DNS Servers
       template: src=template-cname.list dest=/etc/dnsmasq.d/05-pihole-custom-cname.conf force=yes
-  #- name: TASK | Restart dnsmasq
-    #service:
-      #name: dnsmasq
-      #state: restarted
+  - name: TASK | Restart dnsmasq
+    service:
+      name: dnsmasq
+      state: restarted
 
