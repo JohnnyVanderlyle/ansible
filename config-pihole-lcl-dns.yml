@@ -1,1 +1,9 @@
 ---
+- name: Apply Local DNS Entries
+  hosts: all
+  become: true
+  tasks:
+    - name: apply local A-records to all PiHole DNS Servers
+      ansible.builtin.command: 
+      register:
+
