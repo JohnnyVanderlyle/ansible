@@ -3,7 +3,7 @@
   hosts: all
   become: true
   tasks:
-    - name: TASK | Copy dnsmasq config for local DNS
+    - name: TASK | Copy DNS entires to DNS Servers
       template: src=template-dns.list dest=/etc/pihole/custom.list force=yes
 #    - name: TASK | Restart dnsmasq
  #     service:
