@@ -1,7 +1,11 @@
 ---
 - name: Play to Shutdown Windows
-  hosts: all
+  hosts: windows
+  become: false
+  gather_facts: false
   tasks:
-  - name: Shutdown Windows PC
-    ansible.windows.win_command:
-      cmd: shutdown -s -f -t 0
+  - name: Test Connection to Windows Server
+    ansible.windows.win_ping:
+  # - name: Shutdown Windows PC
+    # ansible.windows.win_command:
+      # cmd: shutdown -s -f -t 0
