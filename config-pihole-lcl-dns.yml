@@ -8,4 +8,4 @@
     - name: TASK | Copy CNAME DNS entires to DNS Servers
       template: src=template-cname.list dest=/etc/dnsmasq.d/05-pihole-custom-cname.conf force=yes
     - name: restart PiHole DNS Service (FTL)
-      command: pihole-FTL restart
+      command: systemctl restart pihole-FTL
