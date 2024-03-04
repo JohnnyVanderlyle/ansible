@@ -1,12 +1,6 @@
-10.0.1.253 pac.wonkaco.co.uk
-10.0.1.11 san.wonkaco.co.uk
 10.0.1.7 smoothwall1.wonkaco.co.uk
 10.0.1.8 smoothwall2.wonkaco.co.uk
-10.0.1.233 docker.wonkaco.co.uk
-10.0.1.233 homarr.wonkaco.co.uk
-10.0.1.233 kanban.wonkaco.co.uk
-10.0.1.233 portainer.wonkaco.co.uk
-10.0.1.233 semaphore.wonkaco.co.uk
-10.0.1.233 ansible.wonkaco.co.uk
-10.0.1.233 test2.wonkaco.co.uk
-
+10.0.1.11 san.wonkaco.co.uk
+10.0.1.61 semaphore.wonkaco.co.uk
+10.0.1.233 docker001.wonkaco.co.uk
+10.0.1.253 pac.wonkaco.co.uk
