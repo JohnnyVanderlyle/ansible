@@ -1,2 +1,4 @@
-cname=container.wonkaco.co.uk,docker.wonkaco.co.uk
-cname=test3.wonkaco.co.uk,docker.wonkaco.co.uk
+cname=homarr.wonkaco.co.uk,docker001.wonkaco.co.uk
+cname=kanban.wonkaco.co.uk,docker001.wonkaco.co.uk
+cname=portainer.wonkaco.co.uk,docker001.wonkaco.co.uk
+cname=ansible.wonkaco.co.uk,docker001.wonkaco.co.uk
