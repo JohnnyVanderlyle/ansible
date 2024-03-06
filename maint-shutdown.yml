@@ -1,6 +1,5 @@
 ---
 - name: Shutdown Servers
-  gather_facts: no
   hosts: all
   become: true
   tasks:
