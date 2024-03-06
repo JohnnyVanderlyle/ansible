@@ -1,0 +1,7 @@
+---
+- name: Restart Smoothwall IDEX Servcie
+  hosts: all
+  become: true
+  tasks:
+    - name: Restart Smoothwall Idex Service
+      command: /etc/init.d/smoothwall-core-disdbd stop
