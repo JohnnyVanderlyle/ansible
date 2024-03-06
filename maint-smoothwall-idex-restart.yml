@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: Restart Smoothwall Idex Service
-      command: /etc/init.d/smoothwall-core-disdbd stop
+      command: /etc/init.d/smoothwall-core-disdbd restart
