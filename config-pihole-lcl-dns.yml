@@ -7,5 +7,8 @@
       template: src=template-dns.list dest=/etc/pihole/custom.list force=yes
     - name: TASK | Copy CNAME DNS entires to DNS Servers
       template: src=template-cname.list dest=/etc/dnsmasq.d/05-pihole-custom-cname.conf force=yes
-    - name: restart PiHole DNS Service (FTL)
+    - name: TASK | Update Rate Limit
+      template: src=template-pihole-FTL.conf dest=/etc/pihole/pihole-FTL.conf force=yes
+    - name: TASK |  restart PiHole DNS Service (FTL)
       command: systemctl restart pihole-FTL
+
