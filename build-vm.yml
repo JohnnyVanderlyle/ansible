@@ -7,7 +7,7 @@
     vmware_guest:
       hostname: "10.0.1.205"
       username: "temp@vsphere.local"
-      password: "&sIq:*9o"~44dK3cL3}"
+      password: "j~q{1I1bx?4*{£8N9>G"
       validate_certs: False
       name: testvm_2
       template: W2019_Base
