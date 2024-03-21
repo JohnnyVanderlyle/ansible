@@ -22,7 +22,7 @@
         username: "{{ vcenter_username }}"
         password: "{{ vcenter_password }}"
         validate_certs: "{{ vcenter_validate_certs }}"
-        name: testvm_2
+        name: "{{ vm_name }}"
         template: "{{ vm_template }}"
         datacenter: "{{ vcenter_datacenter }}"
         folder: "{{ vcenter_destination_folder }}"
