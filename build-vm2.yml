@@ -6,18 +6,28 @@
   
   vars_files:
     - vars.yml
-  
+
   tasks:
-  - name: Clone the template
+      - name: create folder
+      community.vmware.vcenter_folder:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ vcenter_validate_certs }}"
+        datacenter: "{{ vcenter_datacenter }}"
+        folder_name: "{{ vcenter_destination_folder }}"
+        folder_type: vm
+        state: present
+    - name: Clone the template
     vmware_guest:
-      hostname: "{{ vcenter_hostname }}"
-      username: "{{ vcenter_username }}"
-      password: "{{ vcenter_password }}"
-      validate_certs: "{{ vcenter_validate_certs }}"
-      name: testvm_2
-      template: "{{ vm_template }}"
-      datacenter: "{{ vcenter_datacenter }}"
-      folder: "{{ vcenter_destination_folder }}"
-      state: "{{ vm_state }}"
-      cluster: "{{ vcenter_cluster }}"
-      wait_for_ip_address: yes
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        validate_certs: "{{ vcenter_validate_certs }}"
+        name: testvm_2
+        template: "{{ vm_template }}"
+        datacenter: "{{ vcenter_datacenter }}"
+        folder: "{{ vcenter_destination_folder }}"
+        state: "{{ vm_state }}"
+        cluster: "{{ vcenter_cluster }}"
+        wait_for_ip_address: yes
