@@ -1,18 +1,23 @@
 ---
-- name: Create a VM from a template
+- name: create vm 
   hosts: localhost
-  gather_facts: no
+  become: false
+  gather_facts: false
+  
+  vars_files:
+    - vars.yml
+  
   tasks:
   - name: Clone the template
     vmware_guest:
-      hostname: "{{ vcenter_ip }}"
+      hostname: "{{ vcenter_hostname }}"
       username: "{{ vcenter_username }}"
       password: "{{ vcenter_password }}"
-      validate_certs: False
+      validate_certs: "{{ vcenter_validate_certs }}"
       name: testvm_2
-      template: template_el7
-      datacenter: "{{ datacenter_name }}"
-      folder: /DC1/vm
-      state: poweredon
-      cluster: "{{ cluster_name }}"
+      template: "{{ vm_template }}"
+      datacenter: "{{ vcenter_datacenter }}"
+      folder: "{{ vcenter_destination_folder }}"
+      state: "{{ vm_state }}"
+      cluster: "{{ vcenter_cluster }}"
       wait_for_ip_address: yes
