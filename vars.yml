@@ -5,13 +5,13 @@ vcenter_password: "j~q{1I1bx?4*{£8N9>G"
 vcenter_validate_certs: false
 vcenter_cluster: "10.0.1.204"
 vm_name: "Ansible_test"
-vm_guest_id: "Microsoft Windows Server 2019 (64-bit)"
+# vm_guest_id: "Microsoft Windows Server 2019 (64-bit)"
 vm_disk_gb: 123
 vm_disk_type: "thin"
 vm_disk_datastore: "ESX04-T2-001"
 vm_hw_ram_mb : 4096
 vm_hw_cpu_n: 2
-vm_hw_scsi: "LSI Logic SAS"
+vm_hw_scsi: "lsilogic"
 vm_net_name: "VLAN40_Server_DMZ"
 vm_net_type: "vmxnet3"
 vm_ip: "10.0.40.101"
