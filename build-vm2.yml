@@ -6,7 +6,7 @@
   vars_files:
     - vars.yml
   tasks:
-      - name: create folder
+    - name: create folder
       community.vmware.vcenter_folder:
         hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_username }}"
@@ -17,7 +17,7 @@
         folder_type: vm
         state: present
     - name: Clone the template
-    vmware_guest:
+      vmware_guest:
         hostname: "{{ vcenter_hostname }}"
         username: "{{ vcenter_username }}"
         password: "{{ vcenter_password }}"
